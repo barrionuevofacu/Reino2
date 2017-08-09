@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 08/08/2017 17:40:37 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="javaapplication9.Producto" table="producto" schema="public" optimistic-lock="version">
+        <id name="codigoprod" type="big_decimal">
+            <column name="codigoprod" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombreprod" type="string">
+            <column name="nombreprod" length="30" not-null="true" />
+        </property>
+        <property name="lineaprod" type="string">
+            <column name="lineaprod" length="20" not-null="true" />
+        </property>
+        <property name="esneto" type="boolean">
+            <column name="esneto" not-null="true" />
+        </property>
+        <property name="cantidad" type="int">
+            <column name="cantidad" precision="5" scale="0" not-null="true" />
+        </property>
+        <property name="precioventapublico" type="big_decimal">
+            <column name="precioventapublico" precision="6" />
+        </property>
+    </class>
+</hibernate-mapping>
